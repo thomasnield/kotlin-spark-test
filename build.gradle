@@ -28,4 +28,5 @@ dependencies {
 	compile 'org.apache.spark:spark-core_2.10:1.6.1'
     compile 'com.esotericsoftware:kryo:4.0.0'
     compile 'de.javakaffee:kryo-serializers:0.38'
+    compile 'io.reactivex:rxkotlin:0.60.0'
 }
