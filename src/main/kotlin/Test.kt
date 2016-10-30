@@ -24,4 +24,4 @@ fun main(args: Array<String>) {
 }
 
 //extension function to register Kotlin classes
-fun SparkConf.registerKryoClasses(vararg args: KClass<*>) = registerKryoClasses(args.map { it.java }.toTypedArray
+fun SparkConf.registerKryoClasses(vararg args: KClass<*>) = registerKryoClasses(args.map { it.java }.toTypedArray()
