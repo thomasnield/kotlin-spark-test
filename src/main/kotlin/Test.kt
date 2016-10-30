@@ -1,6 +1,7 @@
 
 import org.apache.spark.SparkConf
 import org.apache.spark.api.java.JavaSparkContext
+import kotlin.reflect.KClass
 
 fun main(args: Array<String>) {
 
