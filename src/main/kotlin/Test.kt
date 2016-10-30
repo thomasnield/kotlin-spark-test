@@ -10,7 +10,7 @@ fun main(args: Array<String>) {
             .setMaster("local")
             .setAppName("Line Counter")
 
-    conf.registerKryoClasses(arrayOf(MyItem::class.java))
+    conf.registerKryoClasses(MyItem::class)
 
     val sc = JavaSparkContext(conf)
 
@@ -22,3 +22,6 @@ fun main(args: Array<String>) {
 
     println(letters.collect())
 }
+
+//extension function to accept Kotlin classes
+fun SparkConf.registerKryoClasses(vararg args: KClass<*>) = registerKryoClasses(args.map { it.java }.toTypedArray
