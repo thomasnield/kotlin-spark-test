@@ -7,8 +7,8 @@ buildscript {
     mavenCentral()
   }
   dependencies {
-    classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.0.+'
-      classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    	classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.0.+'
+     	classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
   }
 }
 
@@ -17,21 +17,19 @@ apply plugin: "scala"
 
 repositories {
   mavenCentral()
-    maven { url "https://jitpack.io" }
 }
 
 dependencies {
-  compile 'org.jetbrains.kotlin:kotlin-stdlib:1.0.+'
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+  	compile 'org.jetbrains.kotlin:kotlin-stdlib:1.0.+'
+	compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
 
 
 dependencies {
-	compile 'com.google.guava:guava:19.0'
 	compile 'org.apache.spark:spark-core_2.10:1.6.1'
-    compile 'com.esotericsoftware:kryo:4.0.0'
-    compile 'de.javakaffee:kryo-serializers:0.38'
-    compile 'io.reactivex:rxkotlin:0.60.0'
+	//using Kryo for serialization
+  	compile 'com.esotericsoftware:kryo:4.0.0'
+    	compile 'de.javakaffee:kryo-serializers:0.38'
 }
 sourceSets {
     main.java.srcDirs += 'src/main/kotlin'
