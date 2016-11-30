@@ -8,7 +8,7 @@ buildscript {
     }
 }
 
-apply plugin: "kotlin"g
+apply plugin: "kotlin"
 
 repositories {
     mavenCentral()
