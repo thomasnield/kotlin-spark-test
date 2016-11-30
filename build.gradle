@@ -1,19 +1,26 @@
 buildscript {
-	ext.kotlin_version = '1.0.5'
-	repositories {
-		mavenCentral()
-	}
-	dependencies {
-		classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-	}
+    ext.kotlin_version = '1.0.5'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
 }
 
 apply plugin: "kotlin"g
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
 dependencies {
-	compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    //Apache Spark
+    compile 'org.apache.spark:spark-core_2.10:1.6.1'
+
+    //using Kryo for serialization (optional)
+    compile 'com.esotericsoftware:kryo:4.0.0'
+    compile 'de.javakaffee:kryo-serializers:0.38'
 }
