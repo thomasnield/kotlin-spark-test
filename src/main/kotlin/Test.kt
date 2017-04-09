@@ -15,10 +15,10 @@ fun main(args: Array<String>) {
 
     val sc = JavaSparkContext(conf)
 
-    val input = sc.parallelize(listOf(MyItem(1,"Alpha"),MyItem(2,"Beta")))
+    val input = sc.parallelize(listOf(MyItem(1,"Alpha"), MyItem(2,"Beta")))
 
     val letters = input.flatMap { it.value.split(Regex("(?<=.)")) }
-            .map { it.toUpperCase() }
+            .map(String::toUpperCase)
             .filter { it.matches(Regex("[A-Z]")) }
 
     println(letters.collect())
